@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+   course-fe:
+        container_name: 'course-fe'
+        image: course-fe:latest
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+            args:
+                - APP_COURSE_FE_PORT=${APP_COURSE_FE_PORT}
+        ports:
+            - ${APP_COURSE_FE_PORT}:${APP_COURSE_FE_PORT}
+        env_file:
+            - .env
+        stdin_open: true
+        volumes:
+            - './:/app'
+            - '/app/node_modules'
+        restart: on-failure
+        command: npm start
