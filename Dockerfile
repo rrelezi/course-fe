@@ -23,5 +23,6 @@ COPY yarn.lock .
 RUN yarn install --frozen-lockfile
 
 COPY . .
+RUN ["yarn", "build"]
 
 CMD ["npm", "start"]
