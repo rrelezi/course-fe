@@ -1,0 +1,35 @@
+// Component Base
+@mixin app-build-component--shopping-cart-icon() {
+  .shopping-cart-container {
+    display: block;
+    position: sticky;
+    top: 90vh;
+
+    .shopping-cart-display {
+      @apply bg-amber-300 shadow-md;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      border-radius: 100%;
+      position: sticky;
+      left: 90vw;
+      width: 4rem;
+      height: 4rem;
+      &:hover {
+        @apply bg-amber-400 shadow-lg;
+        cursor: pointer;
+      }
+
+      .shopping-cart-items-number {
+        @apply font-semibold;
+        position: absolute;
+        top: 30px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+/// Build Component Base
+@include app-build-component--shopping-cart-icon;
