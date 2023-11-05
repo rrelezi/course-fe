@@ -6,19 +6,31 @@
     top: 90vh;
 
     .shopping-cart-display {
-      @apply bg-amber-300 shadow-md;
+      @apply bg-amber-400 shadow-md;
+      bottom: 15px;
       display: flex;
       align-content: center;
       justify-content: center;
       flex-wrap: wrap;
       border-radius: 100%;
-      position: sticky;
-      left: 90vw;
-      width: 4rem;
-      height: 4rem;
+      position: relative;
+      left: 95%;
+      width: 3.5rem;
+      height: 3.5rem;
+
+      @include responsive-below(map-get($app--layout-breakpoints, md)) {
+        width: 3rem;
+        height: 3rem;
+      }
+
       &:hover {
-        @apply bg-amber-400 shadow-lg;
+        @apply bg-amber-500 shadow-lg;
         cursor: pointer;
+      }
+
+      .shopping-cart-icon {
+        position: absolute;
+        top: 0.5rem;
       }
 
       .shopping-cart-items-number {
@@ -26,6 +38,11 @@
         position: absolute;
         top: 30px;
         right: 10px;
+
+        @include responsive-below(map-get($app--layout-breakpoints, md)) {
+          top: 25px;
+          right: 10px;
+        }
       }
     }
   }

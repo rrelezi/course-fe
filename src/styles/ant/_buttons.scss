@@ -1,0 +1,47 @@
+// Extend Base
+@mixin app-build-extend--buttons-base() {
+	.ant-btn {
+		border-radius: 0.3rem;
+
+		&.ant-btn-primary {
+			background: array-get($app-amber-palette, amber-500);
+			padding: .5625rem 1.0625rem;
+			height: 38px;
+			@apply flex items-center justify-center text-sm font-medium text-white shadow-sm;
+
+			&:not(:disabled):not(.ant-btn-disabled):hover {
+				background-color: array-get($app-amber-palette, amber-600);
+				border-color: array-get($app-amber-palette, amber-600);
+			}
+
+			&:not(:disabled):not(.ant-btn-disabled):active {
+				background-color: array-get($app-amber-palette, amber-600);
+				border-color: array-get($app-amber-palette, amber-600);
+			}
+		}
+
+		&.ant-btn-default {
+			border: 1px solid var(--gray-300, #D1D5DB);
+			padding: .625rem 1.125rem;
+			height: 38px;
+			@apply flex items-center justify-center text-sm font-medium text-gray-700 shadow-sm;
+
+			&:not(:disabled):not(.ant-btn-disabled):hover {
+				color: array-get($app-amber-palette, amber-500);
+				border-color: array-get($app-amber-palette, amber-500);
+			}
+		}
+
+		&.ant-btn-link {
+			color: array-get($app-amber-palette, amber-500);
+			@apply text-xs leading-4 font-medium;
+
+			&:not(:disabled):not(.ant-btn-disabled):hover {
+				color: array-get($app-amber-palette, amber-600);
+			}
+		}
+	}
+}
+
+/// Build Extend Base
+@include app-build-extend--buttons-base;

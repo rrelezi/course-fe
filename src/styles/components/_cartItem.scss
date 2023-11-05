@@ -1,0 +1,20 @@
+// Component Base
+@mixin app-build-component--cart-item() {
+    .cart-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .cart-item-quantity {
+            .cart-item-quantity-left {
+                width: 2.5rem;
+            }
+            .cart-item-quantity-right {
+                width: 3.5rem;
+            }
+        }
+    }
+}
+
+/// Build Component Base
+@include app-build-component--cart-item;
