@@ -1,0 +1,29 @@
+// Component Base
+@mixin app-build-extend--inputs-base() {
+  .ant-input {
+    @apply shadow-sm border-gray-300;
+    border-radius: 0;
+    height: 38px;
+
+    &.ant-input-status-error {
+      &:not(.ant-input-borderless).ant-input {
+        border-color: var(--red-600, #dc2626);
+      }
+    }
+
+    &:hover {
+      @apply border-gray-500;
+    }
+
+    &:focus {
+      @apply border-gray-500 shadow-sm;
+    }
+
+    &:placeholder-shown {
+      @apply text-sm leading-5 font-medium text-gray-500;
+    }
+  }
+}
+
+/// Build Component Base
+@include app-build-extend--inputs-base;

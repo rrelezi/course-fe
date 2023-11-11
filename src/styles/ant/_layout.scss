@@ -1,0 +1,27 @@
+// Extend Base
+@mixin app-build-extend--layout-base() {
+    .ant-layout {
+        .ant-layout-header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: array-get($app-amber-palette, amber-400);
+            justify-items: center;
+        }
+
+        .ant-layout-footer {
+            background-color: array-get($app-amber-palette, amber-400);
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            padding: 0;
+            height: 5rem;
+        }
+    }
+}
+
+/// Build Extend Base
+@include app-build-extend--layout-base;

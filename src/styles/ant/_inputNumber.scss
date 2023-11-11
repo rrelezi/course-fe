@@ -1,0 +1,26 @@
+// Component Base
+@mixin app-build-extend--input-number-base() {
+	.ant-input-number {
+		border-radius: 0.4rem;
+		padding: 0.5625rem 0.8125rem;
+		width: 4.5rem;
+		border: 1px solid var(--gray-300, #D1D5DB);
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+		@apply text-sm leading-5 font-normal;
+
+		&:hover {
+			border: 1px solid var(--gray-500, #6B7280);
+			box-shadow: 0 0 0 1px #6B7280, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+		}
+
+		.ant-input-number-input-wrap {
+			.ant-input-number-input {
+				padding: 0;
+				height: 1.25rem;
+			}
+		}
+	}
+}
+
+/// Build Component Base
+@include app-build-extend--input-number-base;

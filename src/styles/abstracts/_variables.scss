@@ -3,10 +3,44 @@ $variable-prefix: app-- !default;
 
 /// Breakpoints map
 $app--layout-breakpoints: (
-  xs: 375px,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1280px,
-  xxl: 1920px,
+    xs: 375px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1280px,
+    xxl: 1920px,
 ) !default;
+
+$app-colors: (
+    primary: (
+        base: #eab308,
+    ),
+    secondary: (
+        base: #64748b,
+    ),
+    success: (
+        base: #10b981,
+    ),
+    information: (
+        base: #3b82f6,
+    ),
+    warning: (
+        base: #f97316,
+    ),
+    danger: (
+        base: #ef4444,
+    ),
+);
+
+$app-amber-palette: (
+  amber-50: #fffbeb,
+  amber-100: #fef3c7,
+  amber-200: #fde68a,
+  amber-300: #fcd34d,
+  amber-400: #fbbf24,
+  amber-500: #f59e0b,
+  amber-600: #d97706,
+  amber-700: #b45309,
+  amber-800: #92400e,
+  amber-900: #78350f,
+);

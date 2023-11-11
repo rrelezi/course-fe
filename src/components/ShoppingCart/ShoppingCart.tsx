@@ -1,32 +1,63 @@
-import React, { useState } from "react";
+import React from 'react'
 
-import { RiShoppingCart2Fill } from "react-icons/ri";
-import { Drawer } from "antd";
+import { Drawer } from 'antd'
+
+import { ICheckoutStore, useCheckoutStore } from '../../store'
+import { useWindowDimensions } from '../../hooks'
+
+import { RiShoppingCart2Fill } from 'react-icons/ri'
+import { CartList } from './CartList'
+import SidebarFooter from './SidebarFooter'
 
 const ShoppingCart = () => {
-  const [visible, setVisible] = useState(false);
+    const { width } = useWindowDimensions()
 
-  return (
-    <>
-      <div className={"shopping-cart-container"}>
-        <div
-          className={"shopping-cart-display"}
-          onClick={() => setVisible(true)}
-        >
-          <div className={"shopping-cart-items-number"}>{0}</div>
-          <RiShoppingCart2Fill size={35} className={"shopping-cart-icon"} />
-        </div>
-      </div>
+    const { items, drawerVisible, setDrawerVisible } = useCheckoutStore(
+        (state) => state as ICheckoutStore
+    )
 
-      <Drawer
-        open={visible}
-        title={"Shopping Cart"}
-        onClose={() => setVisible(false)}
-      >
-        <div>Here will be Cart Items</div>
-      </Drawer>
-    </>
-  );
-};
+    const getShoppingCartIconSize = () => {
+        if (width > 768) {
+            return 25
+        }
+        return 20
+    }
 
-export default ShoppingCart;
+    const getDrawerWidth = () => {
+        if (width > 1300) return '40%'
+        if (width > 1024) return '50%'
+        if (width > 768) return '60%'
+        return '100%'
+    }
+
+    return (
+        <>
+            <div className={'shopping-cart-container'}>
+                <div
+                    className={'shopping-cart-display'}
+                    onClick={() => setDrawerVisible(true)}
+                >
+                    <RiShoppingCart2Fill
+                        size={getShoppingCartIconSize()}
+                        className={'shopping-cart-icon'}
+                    />
+                    <div className={'shopping-cart-items-number'}>
+                        {items.length}
+                    </div>
+                </div>
+            </div>
+
+            <Drawer
+                open={drawerVisible}
+                title={'Shopping Cart'}
+                onClose={() => setDrawerVisible(false)}
+                width={getDrawerWidth()}
+                footer={<SidebarFooter />}
+            >
+                <CartList items={items} />
+            </Drawer>
+        </>
+    )
+}
+
+export default ShoppingCart
