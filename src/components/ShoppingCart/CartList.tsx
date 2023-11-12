@@ -10,7 +10,7 @@ interface ICartList {
 
 export const CartList = ({ items, highlightItem = '' }: ICartList) => {
     const renderCartList = useMemo(() => {
-        if (items.length < 1) return <div>There are no items in your cart.</div>
+        if (items.length < 1) return <div className={'py-10 text-xl font-medium'}>There are no items in your cart.</div>
 
         return items.map((item, index) => (
             <Row justify="center" align="middle" key={index}>

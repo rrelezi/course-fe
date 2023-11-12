@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 // 1. Configuration and helpers
-@import "abstracts/index";
+@import 'abstracts/index';
 
 // 2. Base stuff
-@import "base/index";
+@import 'base/index';
 
 // 3. Ant Design
-@import "ant/index";
+@import 'ant/index';
 
 // 4. Components
-@import "components/index";
+@import 'components/index';

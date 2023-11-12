@@ -1,14 +1,23 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import { Layout, Menu, Col, Row, Space } from 'antd'
 
 import ShoppingCart from '../ShoppingCart/ShoppingCart'
 import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
+import {useLocation} from "react-router-dom";
 
 const { Header, Content, Footer } = Layout
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scroll( {
+            top: 0,
+            behavior: 'smooth'
+        })
+    }, [location])
     return (
         <Layout>
             <Header>
@@ -16,16 +25,14 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             </Header>
 
             <Content
-                className="site-layout"
-                style={{ padding: '0 50px', height: '100vh' }}
+                className="bg-fuchsia-50"
+                style={{ padding: '0 20px', height: '100vh' }}
             >
                 <ShoppingCart />
                 {children}
             </Content>
 
-            <Footer>
-                <AppFooter />
-            </Footer>
+            <Footer children={ <AppFooter />} />
         </Layout>
     )
 }

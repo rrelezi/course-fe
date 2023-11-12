@@ -1,13 +1,27 @@
 import { Button, Col, Row } from 'antd'
+import { useNavigate } from 'react-router-dom'
 
-const SidebarFooter = () => {
+const SidebarFooter = ({
+    setDrawerVisible,
+}: {
+    setDrawerVisible: (drawerVisible: boolean) => void
+}) => {
+    const navigate = useNavigate()
+
+    const onViewCartClick = () => {
+        navigate('/cart')
+        setDrawerVisible(false);
+    }
+
     return (
         <Row justify={'space-between'}>
             <Col span={12} className={'pr-4'}>
-                <Button className={'w-full'}>View Cart</Button>
+                <Button className={'w-full'} onClick={onViewCartClick}>
+                    View Cart
+                </Button>
             </Col>
             <Col span={12}>
-                <Button type={'primary'} className={'w-full bg-amber-200'}>
+                <Button type={'primary'} className={'w-full bg-fuchsia-200'}>
                     Checkout
                 </Button>
             </Col>

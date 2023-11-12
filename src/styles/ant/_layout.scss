@@ -8,17 +8,18 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            background-color: array-get($app-amber-palette, amber-400);
+            background-color: array-get($app-fuchsia-palette, fuchsia-400);
             justify-items: center;
+            height: max-content;
+            padding: 1rem 0;
         }
 
         .ant-layout-footer {
-            background-color: array-get($app-amber-palette, amber-400);
+            background-color: array-get($app-fuchsia-palette, fuchsia-400);
             display: flex;
             justify-content: center;
             justify-items: center;
             padding: 0;
-            height: 5rem;
         }
     }
 }
