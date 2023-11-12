@@ -52,7 +52,7 @@ const ShoppingCart = () => {
                 title={'Shopping Cart'}
                 onClose={() => setDrawerVisible(false)}
                 width={getDrawerWidth()}
-                footer={<SidebarFooter />}
+                footer={<SidebarFooter setDrawerVisible={setDrawerVisible} />}
             >
                 <CartList items={items} />
             </Drawer>

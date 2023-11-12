@@ -4,132 +4,132 @@
 
 //== Media Query - Responsive Below
 @mixin responsive-below($width) {
-  @media (max-width: #{$width}) {
-    @content;
-  }
+    @media (max-width: #{$width}) {
+        @content;
+    }
 }
 
 //== Media Query - Responsive Above
 @mixin responsive-above($width) {
-  @media (min-width: #{$width}) {
-    @content;
-  }
+    @media (min-width: #{$width}) {
+        @content;
+    }
 }
 
 //== Media Query - Responsive Above
 @mixin responsive-between($min-width, $max-width) {
-  @media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
-    @content;
-  }
+    @media (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+        @content;
+    }
 }
 
 //== Media Query - Min Desktop Mode
 @mixin minimal-desktop {
-  @media (min-width: (map-get($app--layout-breakpoints, lg) + 1px)) and (max-width: map-get($app--layout-breakpoints, xl)) {
-    @content;
-  }
+    @media (min-width: (map-get($app--layout-breakpoints, lg) + 1px)) and (max-width: map-get($app--layout-breakpoints, xl)) {
+        @content;
+    }
 }
 
 @mixin xlarge-desktop {
-  @media (min-width: (map-get($app--layout-breakpoints, xl) + 1px)) and (max-width: map-get($app--layout-breakpoints, xxl)) {
-    @content;
-  }
+    @media (min-width: (map-get($app--layout-breakpoints, xl) + 1px)) and (max-width: map-get($app--layout-breakpoints, xxl)) {
+        @content;
+    }
 }
 
 //== Media Query - Desktop Mode
 @mixin desktop {
-  @media (min-width: (map-get($app--layout-breakpoints, lg) + 1px)) {
-    @content;
-  }
+    @media (min-width: (map-get($app--layout-breakpoints, lg) + 1px)) {
+        @content;
+    }
 }
 
 //== Media Query - Desktop & Tablet Modes
 @mixin desktop-and-tablet {
-  @media (min-width: (map-get($app--layout-breakpoints, md) + 1px)) {
-    @content;
-  }
+    @media (min-width: (map-get($app--layout-breakpoints, md) + 1px)) {
+        @content;
+    }
 }
 
 //== Media Query - Tablet Mode
 @mixin tablet {
-  @media (min-width: (map-get($app--layout-breakpoints, md) + 1px)) and (max-width: map-get($app--layout-breakpoints, lg)) {
-    @content;
-  }
+    @media (min-width: (map-get($app--layout-breakpoints, md) + 1px)) and (max-width: map-get($app--layout-breakpoints, lg)) {
+        @content;
+    }
 }
 
 //== Media Query - Tablet & Mobile Modes
 @mixin tablet-and-mobile {
-  @media (max-width: map-get($app--layout-breakpoints, lg)) {
-    @content;
-  }
+    @media (max-width: map-get($app--layout-breakpoints, lg)) {
+        @content;
+    }
 }
 
 @mixin small-mobile {
-  @media (min-width: map-get($app--layout-breakpoints, xs)) and (max-width: map-get($app--layout-breakpoints, sm)) {
-    @content;
-  }
+    @media (min-width: map-get($app--layout-breakpoints, xs)) and (max-width: map-get($app--layout-breakpoints, sm)) {
+        @content;
+    }
 }
 
 //== Media Query - Mobile Mode
 @mixin mobile {
-  @media (max-width: map-get($app--layout-breakpoints, md)) {
-    @content;
-  }
+    @media (max-width: map-get($app--layout-breakpoints, md)) {
+        @content;
+    }
 }
 
 //== IE8-11 versions hack
 @mixin hack-ie8-11 {
-  @media screen\0 {
-    @content;
-  }
+    @media screen\0 {
+        @content;
+    }
 }
 
 //== Edge All versions hack
 @mixin hack-edge-all {
-  @supports (-ms-ime-align: auto) {
-    @content;
-  }
+    @supports (-ms-ime-align: auto) {
+        @content;
+    }
 }
 
 @mixin transform($degree) {
-  transform: #{$degree};
+    transform: #{$degree};
 }
 
 @mixin keyframes($animationName) {
-  @keyframes #{$animationName} {
-    @content;
-  }
+    @keyframes #{$animationName} {
+        @content;
+    }
 
-  @keyframes #{$animationName} {
-    @content;
-  }
+    @keyframes #{$animationName} {
+        @content;
+    }
 
-  @keyframes #{$animationName} {
-    @content;
-  }
+    @keyframes #{$animationName} {
+        @content;
+    }
 
-  @keyframes #{$animationName} {
-    @content;
-  }
+    @keyframes #{$animationName} {
+        @content;
+    }
 }
 
 @mixin animation(
-  $name,
-  $duration,
-  $fill-mode: forwards,
-  $timing-function: linear,
-  $iteration-count: 1
+    $name,
+    $duration,
+    $fill-mode: forwards,
+    $timing-function: linear,
+    $iteration-count: 1
 ) {
-  animation-duration: $duration;
-  animation-timing-function: $timing-function;
-  animation-name: $name;
-  animation-iteration-count: $iteration-count;
-  animation-fill-mode: $fill-mode;
+    animation-duration: $duration;
+    animation-timing-function: $timing-function;
+    animation-name: $name;
+    animation-iteration-count: $iteration-count;
+    animation-fill-mode: $fill-mode;
 }
 
 @mixin transition($attribute, $time, $effect: ease, $delay) {
-  transition-property: width;
-  transition-duration: $time;
-  transition-timing-function: $effect;
-  transition-delay: $delay;
+    transition-property: width;
+    transition-duration: $time;
+    transition-timing-function: $effect;
+    transition-delay: $delay;
 }
