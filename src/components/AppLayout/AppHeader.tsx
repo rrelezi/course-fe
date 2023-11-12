@@ -18,7 +18,8 @@ const { Text } = Typography
 
 const AppHeader = () => {
     const navigate = useNavigate()
-    const { width } = useWindowDimensions()
+    const { windowDimensions } = useWindowDimensions();
+    const { width } = windowDimensions;
 
     const handleMenuClick: MenuProps['onClick'] = (e) => {
         message.info('Click on menu item.')
@@ -71,7 +72,7 @@ const AppHeader = () => {
                     align={'center'}
                     onClick={() => navigate('/')}
                 >
-                    <Text className="cursor-pointer text-2xl p-3">Logo</Text>
+                    <Text className="cursor-pointer text-center text-2xl p-3">Logo</Text>
                 </Flex>
 
                 <Col className={'flex justify-end'}>

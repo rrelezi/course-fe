@@ -24,15 +24,12 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
                 <AppHeader />
             </Header>
 
-            <Content
-                className="bg-fuchsia-50"
-                style={{ padding: '0 20px', height: '100vh' }}
-            >
+            <Content>
                 <ShoppingCart />
                 {children}
             </Content>
 
-            <Footer children={ <AppFooter />} />
+          <Footer children={ <AppFooter />}/>
         </Layout>
     )
 }

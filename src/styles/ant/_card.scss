@@ -1,7 +1,7 @@
 // Component Base
 @mixin app-build-extend--cards-base() {
     .ant-card {
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         @apply shadow-sm;
 
         &.ant-card-bordered {
