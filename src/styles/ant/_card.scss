@@ -1,0 +1,56 @@
+// Component Base
+@mixin app-build-extend--cards-base() {
+    .ant-card {
+        border-radius: 1rem;
+        @apply shadow-sm;
+
+        &.ant-card-bordered {
+            @apply border-b-2 border-gray-200 m-3;
+
+            .ant-card-head {
+                @apply border-b-0 border-gray-200;
+                padding: 16px 24px;
+
+                .ant-card-head-wrapper {
+                    .ant-card-head-title {
+                        @apply text-2xl leading-8;
+                        font-weight: 600;
+                    }
+
+                    .ant-card-extra {
+                        @apply text-sm leading-5 font-medium;
+                    }
+                }
+            }
+
+            .ant-card-body {
+                padding: 0;
+            }
+
+            .ant-card-footer {
+                @apply px-6 py-3 bg-gray-50;
+            }
+        }
+
+        &:not(.ant-card-bordered) {
+            &.ant-card-type-inner {
+                box-shadow: none;
+
+                .ant-card-body {
+                    padding: 1rem;
+                }
+            }
+        }
+
+        .ant-card-actions li {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0.75rem 1.5rem;
+            margin: 0;
+        }
+    }
+}
+
+/// Build Component Base
+@include app-build-extend--cards-base;

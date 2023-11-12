@@ -1,0 +1,177 @@
+@mixin app-build-extend---checkboxes-base() {
+    .ant-checkbox-wrapper {
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        &:not(.ant-checkbox-wrapper-disabled) {
+            &:hover {
+                .ant-checkbox-checked {
+                    &:not(.ant-checkbox-disabled) {
+                        &:after {
+                            transition: inherit;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ant-checkbox {
+            + span {
+                @apply text-sm leading-5 font-medium;
+            }
+        }
+
+        &.ant-checkbox-wrapper-checked {
+            &:not(.ant-checkbox-wrapper-disabled) {
+                &:hover {
+                    .ant-checkbox-checked {
+                        &:not(.ant-checkbox-disabled) {
+                            .ant-checkbox-inner {
+                                border-color: array-get(
+                                    $app-fuchsia-palette,
+                                    fuchsia-500
+                                );
+                                background-color: array-get(
+                                    $app-fuchsia-palette,
+                                    fuchsia-500
+                                );
+                            }
+                        }
+                    }
+
+                    .ant-checkbox-inner {
+                        border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                        background-color: array-get(
+                            $app-fuchsia-palette,
+                            fuchsia-500
+                        );
+                    }
+                }
+            }
+        }
+
+        &:not(.ant-checkbox-wrapper-disabled) {
+            &:hover {
+                .ant-checkbox-checked {
+                    &:not(.ant-checkbox-disabled) {
+                        &:after {
+                            border-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                        }
+
+                        .ant-checkbox-inner {
+                            border-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                            background-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                        }
+                    }
+                }
+
+                .ant-checkbox-inner {
+                    border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                }
+            }
+
+            .ant-checkbox {
+                &:not(.ant-checkbox-disabled) {
+                    &:hover {
+                        .ant-checkbox-inner {
+                            border-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.ant-checkbox-wrapper-disabled) {
+            &:hover {
+                .ant-checkbox-checked {
+                    &:not(.ant-checkbox-disabled) {
+                        &:after {
+                            border-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                        }
+
+                        .ant-checkbox-inner {
+                            border-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                            background-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                        }
+                    }
+                }
+
+                .ant-checkbox-inner {
+                    border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                }
+            }
+
+            .ant-checkbox {
+                &:not(.ant-checkbox-disabled) {
+                    &:hover {
+                        .ant-checkbox-inner {
+                            border-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                        }
+                    }
+                }
+            }
+        }
+
+        .ant-checkbox {
+            &.ant-checkbox-checked {
+                &:after {
+                    border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                }
+
+                &:not(.ant-checkbox-disabled) {
+                    &:hover {
+                        .ant-checkbox-inner {
+                            background-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                        }
+                    }
+                }
+
+                &:not(.ant-checkbox-disabled) {
+                    &:hover {
+                        .ant-checkbox-inner {
+                            border-color: array-get(
+                                $app-fuchsia-palette,
+                                fuchsia-500
+                            );
+                        }
+                    }
+                }
+
+                .ant-checkbox-inner {
+                    border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                    background-color: array-get($app-fuchsia-palette, fuchsia-500);
+                }
+            }
+        }
+    }
+}
+
+/// Build Extend Base
+@include app-build-extend---checkboxes-base;
