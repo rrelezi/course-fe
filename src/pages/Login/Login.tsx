@@ -97,7 +97,7 @@ const Login = () => {
                                 className={'pl-0'}
                                 onClick={() => navigate('/signup')}
                             >
-                                <Text className={'text-fuchsia-500'}>
+                                <Text className={'text-indigo-500'}>
                                     Click here to sign up.
                                 </Text>
                             </Button>

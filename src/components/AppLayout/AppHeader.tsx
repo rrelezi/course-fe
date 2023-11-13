@@ -30,7 +30,7 @@ const AppHeader = () => {
             label: (
                 <Col
                     className={
-                        'cursor-pointer font-semibold hover:shadow-md px-5 py-2'
+                        'cursor-pointer font-semibold px-5 py-2'
                     }
                 >
                     <Text className="p-3">Links</Text>
@@ -42,7 +42,7 @@ const AppHeader = () => {
             label: (
                 <Col
                     className={
-                        'cursor-pointer font-semibold hover:shadow-md px-5 py-2'
+                        'cursor-pointer font-semibold px-5 py-2'
                     }
                 >
                     <Text className="p-3">Account</Text>
@@ -80,11 +80,11 @@ const AppHeader = () => {
                         direction="horizontal"
                         size={8}
                         className={
-                            'w-full px-5 hover:transition hover:scale-110 cursor-pointer'
+                            'w-full px-5 cursor-pointer'
                         }
                     >
                         <Dropdown menu={menuProps} placement={'bottom'}>
-                            <Col className={'rounded-full p-2 bg-fuchsia-500'}>
+                            <Col className={'rounded-full p-2 bg-indigo-600 hover:bg-indigo-700'}>
                                 <RiUserLine size={25} />
                             </Col>
                         </Dropdown>

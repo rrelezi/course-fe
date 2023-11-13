@@ -28,22 +28,22 @@
                         &:not(.ant-checkbox-disabled) {
                             .ant-checkbox-inner {
                                 border-color: array-get(
-                                    $app-fuchsia-palette,
-                                    fuchsia-500
+                                    $app-indigo-palette,
+                                    indigo-500
                                 );
                                 background-color: array-get(
-                                    $app-fuchsia-palette,
-                                    fuchsia-500
+                                    $app-indigo-palette,
+                                    indigo-500
                                 );
                             }
                         }
                     }
 
                     .ant-checkbox-inner {
-                        border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                        border-color: array-get($app-indigo-palette, indigo-500);
                         background-color: array-get(
-                            $app-fuchsia-palette,
-                            fuchsia-500
+                            $app-indigo-palette,
+                            indigo-500
                         );
                     }
                 }
@@ -56,26 +56,26 @@
                     &:not(.ant-checkbox-disabled) {
                         &:after {
                             border-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                         }
 
                         .ant-checkbox-inner {
                             border-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                             background-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                         }
                     }
                 }
 
                 .ant-checkbox-inner {
-                    border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                    border-color: array-get($app-indigo-palette, indigo-500);
                 }
             }
 
@@ -84,8 +84,8 @@
                     &:hover {
                         .ant-checkbox-inner {
                             border-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                         }
                     }
@@ -99,26 +99,26 @@
                     &:not(.ant-checkbox-disabled) {
                         &:after {
                             border-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                         }
 
                         .ant-checkbox-inner {
                             border-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                             background-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                         }
                     }
                 }
 
                 .ant-checkbox-inner {
-                    border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                    border-color: array-get($app-indigo-palette, indigo-500);
                 }
             }
 
@@ -127,8 +127,8 @@
                     &:hover {
                         .ant-checkbox-inner {
                             border-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                         }
                     }
@@ -139,15 +139,15 @@
         .ant-checkbox {
             &.ant-checkbox-checked {
                 &:after {
-                    border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                    border-color: array-get($app-indigo-palette, indigo-500);
                 }
 
                 &:not(.ant-checkbox-disabled) {
                     &:hover {
                         .ant-checkbox-inner {
                             background-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                         }
                     }
@@ -157,16 +157,16 @@
                     &:hover {
                         .ant-checkbox-inner {
                             border-color: array-get(
-                                $app-fuchsia-palette,
-                                fuchsia-500
+                                $app-indigo-palette,
+                                indigo-500
                             );
                         }
                     }
                 }
 
                 .ant-checkbox-inner {
-                    border-color: array-get($app-fuchsia-palette, fuchsia-500);
-                    background-color: array-get($app-fuchsia-palette, fuchsia-500);
+                    border-color: array-get($app-indigo-palette, indigo-500);
+                    background-color: array-get($app-indigo-palette, indigo-500);
                 }
             }
         }

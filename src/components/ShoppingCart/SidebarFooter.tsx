@@ -21,7 +21,7 @@ const SidebarFooter = ({
                 </Button>
             </Col>
             <Col span={12}>
-                <Button type={'primary'} className={'w-full bg-fuchsia-200'}>
+                <Button type={'primary'} className={'w-full bg-indigo-200'}>
                     Checkout
                 </Button>
             </Col>

@@ -32,15 +32,28 @@ $app-colors: (
     ),
 );
 
-$app-fuchsia-palette: (
-    fuchsia-50: #fdf4ff,
-    fuchsia-100: #fae8ff,
-    fuchsia-200: #f5d0fe,
-    fuchsia-300: #f0abfc,
-    fuchsia-400: #e879f9,
-    fuchsia-500: #d946ef,
-    fuchsia-600: #c026d3,
-    fuchsia-700: #a21caf,
-    fuchsia-800: #86198f,
-    fuchsia-900: #701a75,
+$app-indigo-palette: (
+    indigo-50: #eef2ff,
+    indigo-100: #e0e7ff,
+    indigo-200: #c7d2fe,
+    indigo-300: #a5b4fc,
+    indigo-400: #818cf8,
+    indigo-500: #6366f1,
+    indigo-600: #4f46e5,
+    indigo-700: #4338ca,
+    indigo-800: #3730a3,
+    indigo-900: #312e81,
+);
+
+$app-slate-palette: (
+    slate-50: #f9fafb,
+    slate-100: #f4f5f7,
+    slate-200: #e5e7eb,
+    slate-300: #d2d6dc,
+    slate-400: #9fa6b2,
+    slate-500: #6b7280,
+    slate-600: #4b5563,
+    slate-700: #374151,
+    slate-800: #252f3f,
+    slate-900: #161e2e,
 );
