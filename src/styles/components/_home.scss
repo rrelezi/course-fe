@@ -1,0 +1,9 @@
+// Component Base
+@mixin app-build-component--home() {
+    .tik-tok-bg {
+        background: linear-gradient(180deg, #00f3f0, #000000, #ff2954);
+    }
+}
+
+/// Build Component Base
+@include app-build-component--home;

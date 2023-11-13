@@ -21,7 +21,7 @@
         }
 
         &:focus-within {
-            border-color: array-get($app-fuchsia-palette, fuchsia-400);
+            border-color: array-get($app-indigo-palette, indigo-400);
         }
 
         &:placeholder-shown {
@@ -35,15 +35,15 @@
         height: 38px;
 
         &:hover {
-            border-color: array-get($app-fuchsia-palette, fuchsia-400);
+            border-color: array-get($app-indigo-palette, indigo-400);
         }
 
         &:focus {
-            border-color: array-get($app-fuchsia-palette, fuchsia-400);
+            border-color: array-get($app-indigo-palette, indigo-400);
         }
 
         &:focus-within {
-            border-color: array-get($app-fuchsia-palette, fuchsia-400);
+            border-color: array-get($app-indigo-palette, indigo-400);
         }
 
         & > input.ant-input {

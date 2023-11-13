@@ -4,19 +4,19 @@
         border-radius: 0.3rem;
 
         &.ant-btn-primary {
-            background: array-get($app-fuchsia-palette, fuchsia-500);
+            background: array-get($app-indigo-palette, indigo-600);
             padding: 0.5625rem 1.0625rem;
             height: 38px;
             @apply flex items-center justify-center text-sm font-medium text-white shadow-sm;
 
             &:not(:disabled):not(.ant-btn-disabled):hover {
-                background-color: array-get($app-fuchsia-palette, fuchsia-600);
-                border-color: array-get($app-fuchsia-palette, fuchsia-700);
+                background-color: array-get($app-indigo-palette, indigo-700);
+                border-color: array-get($app-indigo-palette, indigo-800);
             }
 
             &:not(:disabled):not(.ant-btn-disabled):active {
-                background-color: array-get($app-fuchsia-palette, fuchsia-600);
-                border-color: array-get($app-fuchsia-palette, fuchsia-700);
+                background-color: array-get($app-indigo-palette, indigo-700);
+                border-color: array-get($app-indigo-palette, indigo-800);
             }
         }
 
@@ -27,17 +27,17 @@
             @apply flex items-center justify-center text-sm font-medium text-gray-700 shadow-sm;
 
             &:not(:disabled):not(.ant-btn-disabled):hover {
-                color: array-get($app-fuchsia-palette, fuchsia-500);
-                border-color: array-get($app-fuchsia-palette, fuchsia-500);
+                color: array-get($app-indigo-palette, indigo-600);
+                border-color: array-get($app-indigo-palette, indigo-600);
             }
         }
 
         &.ant-btn-link {
-            color: array-get($app-fuchsia-palette, fuchsia-500);
+            color: array-get($app-indigo-palette, indigo-600);
             @apply text-xs leading-4 font-medium;
 
             &:not(:disabled):not(.ant-btn-disabled):hover {
-                color: array-get($app-fuchsia-palette, fuchsia-600);
+                color: array-get($app-indigo-palette, indigo-800);
             }
         }
     }

@@ -18,7 +18,8 @@ const { Text } = Typography
 
 const AppHeader = () => {
     const navigate = useNavigate()
-    const { width } = useWindowDimensions()
+    const { windowDimensions } = useWindowDimensions();
+    const { width } = windowDimensions;
 
     const handleMenuClick: MenuProps['onClick'] = (e) => {
         message.info('Click on menu item.')
@@ -29,7 +30,7 @@ const AppHeader = () => {
             label: (
                 <Col
                     className={
-                        'cursor-pointer font-semibold hover:shadow-md px-5 py-2'
+                        'cursor-pointer font-semibold px-5 py-2'
                     }
                 >
                     <Text className="p-3">Links</Text>
@@ -41,7 +42,7 @@ const AppHeader = () => {
             label: (
                 <Col
                     className={
-                        'cursor-pointer font-semibold hover:shadow-md px-5 py-2'
+                        'cursor-pointer font-semibold px-5 py-2'
                     }
                 >
                     <Text className="p-3">Account</Text>
@@ -71,7 +72,7 @@ const AppHeader = () => {
                     align={'center'}
                     onClick={() => navigate('/')}
                 >
-                    <Text className="cursor-pointer text-2xl p-3">Logo</Text>
+                    <Text className="cursor-pointer text-center text-2xl p-3">Logo</Text>
                 </Flex>
 
                 <Col className={'flex justify-end'}>
@@ -79,11 +80,11 @@ const AppHeader = () => {
                         direction="horizontal"
                         size={8}
                         className={
-                            'w-full px-5 hover:transition hover:scale-110 cursor-pointer'
+                            'w-full px-5 cursor-pointer'
                         }
                     >
                         <Dropdown menu={menuProps} placement={'bottom'}>
-                            <Col className={'rounded-full p-2 bg-fuchsia-500'}>
+                            <Col className={'rounded-full p-2 bg-indigo-600 hover:bg-indigo-700'}>
                                 <RiUserLine size={25} />
                             </Col>
                         </Dropdown>

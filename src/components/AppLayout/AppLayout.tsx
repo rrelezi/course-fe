@@ -1,23 +1,28 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 
 import { Layout, Menu, Col, Row, Space } from 'antd'
 
 import ShoppingCart from '../ShoppingCart/ShoppingCart'
 import AppFooter from './AppFooter'
 import AppHeader from './AppHeader'
-import {useLocation} from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 
 const { Header, Content, Footer } = Layout
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
-    const location = useLocation();
+    const location = useLocation()
 
     useEffect(() => {
-        window.scroll( {
+        window.scroll({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
         })
     }, [location])
+
+    const getContentHeight = () => {
+        if (location.pathname === '/') return 'auto'
+        return '100vh'
+    }
     return (
         <Layout>
             <Header>
@@ -25,14 +30,14 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             </Header>
 
             <Content
-                className="bg-fuchsia-50"
-                style={{ padding: '0 20px', height: '100vh' }}
+                style={{
+                    height: getContentHeight(),
+                }}
             >
-                <ShoppingCart />
-                {children}
+              {children}
+              <ShoppingCart />
             </Content>
-
-            <Footer children={ <AppFooter />} />
+            <Footer children={<AppFooter />} />
         </Layout>
     )
 }

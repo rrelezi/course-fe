@@ -10,7 +10,8 @@ import { CartList } from './CartList'
 import SidebarFooter from './SidebarFooter'
 
 const ShoppingCart = () => {
-    const { width } = useWindowDimensions()
+    const { windowDimensions } = useWindowDimensions();
+    const { width } = windowDimensions;
 
     const { items, drawerVisible, setDrawerVisible } = useCheckoutStore(
         (state) => state as ICheckoutStore
@@ -53,6 +54,7 @@ const ShoppingCart = () => {
                 onClose={() => setDrawerVisible(false)}
                 width={getDrawerWidth()}
                 footer={<SidebarFooter setDrawerVisible={setDrawerVisible} />}
+                zIndex={2200}
             >
                 <CartList items={items} />
             </Drawer>

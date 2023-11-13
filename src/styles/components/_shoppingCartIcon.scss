@@ -4,9 +4,10 @@
         display: block;
         position: sticky;
         top: 90vh;
+        z-index: 2000;
 
         .shopping-cart-display {
-            @apply bg-fuchsia-400 shadow-md;
+            @apply bg-indigo-500 shadow-md;
             bottom: 15px;
             display: flex;
             align-content: center;
@@ -25,7 +26,7 @@
             }
 
             &:hover {
-                @apply bg-fuchsia-500 shadow-lg;
+                @apply bg-indigo-600 shadow-lg;
                 cursor: pointer;
             }
 
