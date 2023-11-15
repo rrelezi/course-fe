@@ -1,11 +1,11 @@
 body {
-    font-family: var(--#{$variable-prefix}body-font-family) !important;
+    font-family: var($app--font-family-base) !important;
 }
 
 :root {
-    font-family: var(--#{$variable-prefix}body-font-family) !important;
+    font-family: var($app--font-family-base) !important;
 }
 
 .ant {
-    font-family: var(--#{$variable-prefix}body-font-family) !important;
+    font-family: var($app--font-family-base) !important;
 }

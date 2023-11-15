@@ -33,9 +33,9 @@ const ShoppingCart = () => {
 
     return (
         <>
-            <div className={'shopping-cart-container'}>
+
                 <div
-                    className={'shopping-cart-display'}
+                    className={'shopping-cart-container'}
                     onClick={() => setDrawerVisible(true)}
                 >
                     <RiShoppingCart2Fill
@@ -46,7 +46,7 @@ const ShoppingCart = () => {
                         {items.length}
                     </div>
                 </div>
-            </div>
+
 
             <Drawer
                 open={drawerVisible}

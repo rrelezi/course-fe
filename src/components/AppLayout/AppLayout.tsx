@@ -28,14 +28,12 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
             <Header>
                 <AppHeader />
             </Header>
-
             <Content
                 style={{
                     height: getContentHeight(),
                 }}
             >
               {children}
-              <ShoppingCart />
             </Content>
             <Footer children={<AppFooter />} />
         </Layout>
