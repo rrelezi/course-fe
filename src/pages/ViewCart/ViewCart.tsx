@@ -9,7 +9,7 @@ const ViewCart = () => {
     )
 
     return(
-        <Card title={'Cart'} className={'px-10 min-h-fit'}>
+        <Card title={'Cart'} className={'px-10 min-h-fit w-full'}>
             <Flex vertical justify={'center'}>
                 <CartList items={items} />
             </Flex>

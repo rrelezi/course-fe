@@ -1,16 +1,36 @@
-const ids = Array.prototype.fill(1, 30)
+const ids = Array(30).fill(1)
 
-const categeories = [
-    { name: 'Web Development', slug:`web-development` },
-    { name: 'Mobile Development', slug:`mobile-development` },
-    { name: 'Data Science', slug:`data-science` },
-    { name: 'Programming Languages', slug:`programming-languages` },
-    { name: 'Game Development', slug:`game-development` },
+export const categeories = [
+    {
+        name: 'Web Development',
+        slug: `web-development`,
+        image: 'https://www.openstudycollege.com/osc/uploads/2023/02/online-courses-hero.gif',
+    },
+    {
+        name: 'Mobile Development',
+        slug: `mobile-development`,
+        image: 'https://www.openstudycollege.com/osc/uploads/2023/02/online-courses-hero.gif',
+    },
+    {
+        name: 'Data Science',
+        slug: `data-science`,
+        image: 'https://www.openstudycollege.com/osc/uploads/2023/02/online-courses-hero.gif',
+    },
+    {
+        name: 'Programming Languages',
+        slug: `programming-languages`,
+        image: 'https://www.openstudycollege.com/osc/uploads/2023/02/online-courses-hero.gif',
+    },
+    {
+        name: 'Game Development',
+        slug: `game-development`,
+        image: 'https://www.openstudycollege.com/osc/uploads/2023/02/online-courses-hero.gif',
+    },
 ]
 
-export const coursesList = ids.map((id) => ({
-    id: id.toString(),
-    name: `Course ${id}`,
+export const coursesList = ids.map((id, index) => ({
+    id: (id + index).toString(),
+    title: `Course ${id}`,
     category: categeories[Math.floor(Math.random() * categeories.length)],
     price: 100,
     quantity: 1,

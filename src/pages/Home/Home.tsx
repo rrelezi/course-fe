@@ -5,18 +5,21 @@ import CountUp from "react-countup";
 import { useWindowDimensions } from "../../hooks";
 import { RiTiktokFill } from "react-icons/ri";
 import ReactPlayer from "react-player/lazy";
+import { categeories, coursesList } from "../../mocks/Courses/courses.list";
+import CoursesList from "../../components/Courses/CoursesList";
 
 
 const { Paragraph, Text } = Typography
 
+
 const Home = () => {
-    const { windowDimensions, getVideoWidth } = useWindowDimensions();
+    const { windowDimensions} = useWindowDimensions();
 
     const { width } = windowDimensions;
 
     return (
         <Row className={'w-full container flex justify-center items-center'}>
-            <Col span={24}>
+          <Col span={24}>
                 <Card>
                     <Row justify={'center'} gutter={[32,24]} className={'px-10 py-7 items-center'}>
                       <Col span={24}>
@@ -40,7 +43,7 @@ const Home = () => {
                 </Card>
             </Col>
 
-            <Divider />
+          <Divider />
 
           <Col span={24} className={'max-w-screen-lg'}>
             <Card className={'tik-tok-bg text-white'}>
@@ -68,7 +71,7 @@ const Home = () => {
 
           <Divider />
 
-              <Col span={24}>
+          <Col span={24}>
                 <Card>
                   <Flex vertical={ width < 1024 ?? 0 } align={'items-center'} className={'p-7'}>
                       <Paragraph className={'font-semibold text-lg px-4 w-full'}>
@@ -92,6 +95,13 @@ const Home = () => {
                   </Flex>
                 </Card>
             </Col>
+
+          <Divider />
+
+          <Col span={24}>
+
+          <CoursesList items={categeories} type={'course-category'} />
+          </Col>
         </Row>
     )
 }
