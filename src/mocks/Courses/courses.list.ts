@@ -30,13 +30,16 @@ export const categeories = [
 
 export const coursesList = ids.map((id, index) => ({
     id: (id + index).toString(),
-    title: `Course ${id}`,
+    name: `Course ${id + index}`,
     category: categeories[Math.floor(Math.random() * categeories.length)],
     price: 100,
     quantity: 1,
     total: 100,
     image: 'https://www.openstudycollege.com/osc/uploads/2023/02/online-courses-hero.gif',
-    description: `Description ${id}`,
+    description:
+      `What is Lorem Ipsum? Lorem Ipsum is simply dummy
+       text of the printing and typesetting industry. Lorem
+       Ipsum has been `,
     discountText: '',
     coupon: '',
 }))

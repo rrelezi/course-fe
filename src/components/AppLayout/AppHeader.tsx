@@ -131,28 +131,6 @@ const AppHeader = () => {
                     <Col>
                         <Button
                             type={'primary'}
-                            onClick={() =>
-                                addItem({
-                                    id: '4',
-                                    name: 'Product 4',
-                                    price: 100,
-                                    quantity: 1,
-                                    total: 100,
-                                    image: 'https://cdn.pixabay.com/photo/2012/11/28/09/32/explosion-67557_1280.jpg',
-                                    description: 'Description 4',
-                                    discountText: '',
-                                    coupon: '',
-                                })
-                            }
-                            className={'hover:transition hover:scale-110 '}
-                        >
-                            Add Item Test
-                        </Button>
-                    </Col>
-
-                    <Col>
-                        <Button
-                            type={'primary'}
                             onClick={() => navigate('/login')}
                             className={'hover:transition hover:scale-110 '}
                         >
