@@ -19,23 +19,18 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         })
     }, [location])
 
-    const getContentHeight = () => {
-        if (location.pathname === '/') return 'auto'
-        return '100vh'
-    }
     return (
         <Layout>
             <Header>
                 <AppHeader />
             </Header>
-
             <Content
                 style={{
-                    height: getContentHeight(),
+                    height: 'auto',
+                    minHeight: '100vh'
                 }}
             >
               {children}
-              <ShoppingCart />
             </Content>
             <Footer children={<AppFooter />} />
         </Layout>

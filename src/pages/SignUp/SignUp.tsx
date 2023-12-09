@@ -31,7 +31,7 @@ const SignUp = () => {
         console.log('Failed:', errorInfo)
     }
     return (
-        <Card title={'Create Account'}>
+        <Card title={'Create Account'} className={'w-full signup-card'}>
             <Flex
                 wrap={'wrap'}
                 align={'center'}

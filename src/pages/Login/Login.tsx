@@ -30,7 +30,7 @@ const Login = () => {
         console.log('Failed:', errorInfo)
     }
     return (
-        <Card title={'Login'}>
+        <Card title={'Login'} className={'w-full login-card'}>
             <Flex
                 wrap={'wrap'}
                 align={'center'}

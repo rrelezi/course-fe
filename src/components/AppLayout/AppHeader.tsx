@@ -13,13 +13,16 @@ import {
 import { useNavigate } from 'react-router-dom'
 import { useWindowDimensions } from '../../hooks'
 import { RiUserLine } from 'react-icons/ri'
+import ShoppingCart from '../ShoppingCart/ShoppingCart'
+import { ICheckoutStore, useCheckoutStore } from '../../store'
 
 const { Text } = Typography
 
 const AppHeader = () => {
     const navigate = useNavigate()
-    const { windowDimensions } = useWindowDimensions();
-    const { width } = windowDimensions;
+    const { addItem } = useCheckoutStore((state) => state as ICheckoutStore)
+    const { windowDimensions } = useWindowDimensions()
+    const { width } = windowDimensions
 
     const handleMenuClick: MenuProps['onClick'] = (e) => {
         message.info('Click on menu item.')
@@ -28,11 +31,7 @@ const AppHeader = () => {
     const items: MenuProps['items'] = [
         {
             label: (
-                <Col
-                    className={
-                        'cursor-pointer font-semibold px-5 py-2'
-                    }
-                >
+                <Col className={'cursor-pointer font-semibold px-5 py-2'}>
                     <Text className="p-3">Links</Text>
                 </Col>
             ),
@@ -40,11 +39,7 @@ const AppHeader = () => {
         },
         {
             label: (
-                <Col
-                    className={
-                        'cursor-pointer font-semibold px-5 py-2'
-                    }
-                >
+                <Col className={'cursor-pointer font-semibold px-5 py-2'}>
                     <Text className="p-3">Account</Text>
                 </Col>
             ),
@@ -60,7 +55,6 @@ const AppHeader = () => {
     if (width < 768)
         return (
             <Row
-                justify={'space-between'}
                 className={
                     'w-full container sm:text-lg md:text-xl font-semibold'
                 }
@@ -69,25 +63,34 @@ const AppHeader = () => {
                     className={
                         'cursor-pointer hover:transition hover:scale-110 mx-5'
                     }
-                    align={'center'}
+                    align={''}
                     onClick={() => navigate('/')}
                 >
-                    <Text className="cursor-pointer text-center text-2xl p-3">Logo</Text>
+                    <Text className="cursor-pointer text-center text-2xl p-3">
+                        Logo
+                    </Text>
                 </Flex>
 
-                <Col className={'flex justify-end'}>
+                <Col span={12}>
                     <Space
                         direction="horizontal"
-                        size={8}
+                        size={12}
                         className={
-                            'w-full px-5 cursor-pointer'
+                            'w-full px-2 cursor-pointer flex items-center justify-end'
                         }
                     >
                         <Dropdown menu={menuProps} placement={'bottom'}>
-                            <Col className={'rounded-full p-2 bg-indigo-600 hover:bg-indigo-700'}>
+                            <Col
+                                className={
+                                    'rounded-full p-2 bg-indigo-600 hover:bg-indigo-700'
+                                }
+                            >
                                 <RiUserLine size={25} />
                             </Col>
                         </Dropdown>
+                        <Col>
+                            <ShoppingCart />
+                        </Col>
                     </Space>
                 </Col>
             </Row>
@@ -133,6 +136,10 @@ const AppHeader = () => {
                         >
                             Log In
                         </Button>
+                    </Col>
+
+                    <Col>
+                        <ShoppingCart />
                     </Col>
                 </Space>
             </Col>

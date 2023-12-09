@@ -16,8 +16,8 @@ const AppFooter = () => {
 
 
     return (
-        <Flex vertical={width < 512 ?? false } justify={'space-between'} className={'w-full text-black py-7 h-full text-lg md:text-xl font-semibold'}>
-            <Col span={width < 512 ? '24' : '8'}>
+        <Flex vertical={width < 512 ?? false } justify={'center'} className={'w-full container text-black py-7 h-full text-lg md:text-xl'}>
+            <Col span={width < 512 ? '24' : '8'} >
                 <Flex vertical align={`${width < 512 ? 'center' : 'start'}`} gap={'middle'} className={'px-5 w-full'}>
                     <Space
                         className={'cursor-pointer hover:transition hover:bg-indigo-600 hover:shadow-md hover:scale-105 w-full px-5 py-2 rounded-md mx-7'}

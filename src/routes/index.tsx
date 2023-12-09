@@ -5,6 +5,7 @@ import AppLayout from '../components/AppLayout/AppLayout'
 import Login from '../pages/Login/Login'
 import SignUp from '../pages/SignUp/SignUp'
 import ViewCart from "../pages/ViewCart/ViewCart";
+import CoursesCategories from "../pages/Courses/CoursesCategories";
 
 export const BASE_PATH = '/'
 
@@ -18,6 +19,7 @@ const Router = () => {
                     <Route path={`${BASE_PATH}/login`} element={<Login />} />
                     <Route path={`${BASE_PATH}/signup`} element={<SignUp />} />
                     <Route path={`${BASE_PATH}/cart`} element={<ViewCart />} />
+                    <Route path={`${BASE_PATH}/courses/:slug`} element={<CoursesCategories />} />
                     {/* Authenticated Routes */}
                 </Routes>
             </AppLayout>

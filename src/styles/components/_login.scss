@@ -1,0 +1,15 @@
+.login-card {
+  width: 100%;
+
+  @include responsive-above(map-get($app--layout-breakpoints, md)) {
+    width: 700px;
+  }
+}
+
+.signup-card {
+  width: 100%;
+
+  @include responsive-above(map-get($app--layout-breakpoints, md)) {
+    width: 700px;
+  }
+}
